@@ -8,14 +8,14 @@ Virtual Store using react, redux and materialUI - built in 4 phases. A Web Appli
 
 ## links and resources
 
-## <center> [sandbox deployed site]() </center>
-
+## <center> [sandbox](https://codesandbox.io/s/quizzical-grass-8ddpd) </center>
+<!-- 
 ## <center> [netlify deployed link]() </center>
-
+ -->
 # Phase 1 -
 
 # uml 
-[phaseOne]()
+![phaseOne](https://github.com/MasteRminD6666/storefront/blob/master/src/assets/Application-State-with-Redux.jpg)
 
 
 <hr>
