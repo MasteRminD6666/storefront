@@ -17,6 +17,8 @@ Virtual Store using react, redux and materialUI - built in 4 phases. A Web Appli
 # uml 
 ![phaseOne](https://github.com/MasteRminD6666/storefront/blob/master/src/assets/Application-State-with-Redux.jpg)
 
+# GiF
+![](https://media.giphy.com/media/8FDvolCLPnStQlKy3v/giphy.gif)
 
 <hr>
 
