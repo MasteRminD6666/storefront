@@ -1,7 +1,7 @@
 import "./App.css";
 import Sidebar from "./components/Header/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Categories from "./components/Pages/Categories";
+// import Categories from "./components/Pages/Categories";
 // import AllCategories from "./components/Pages/AllCategory";
 import Men from "./components/Pages/Manpage";
 import Car from "./components/Pages/Carspage";
