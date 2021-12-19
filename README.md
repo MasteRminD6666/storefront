@@ -45,10 +45,8 @@ This application will power an online storefront that will allow users to browse
 The application will be created with the following overall architecture and methodologies
 
 - React
-- ES6 Classes
 - Redux Store for Application State
-- Deployed API with Mongo storage for storing categories and products
 - Superagent or Axios for performing API Requests
 - Material UI for layout and styling
 - Test Driven Development, using Jest
-- Deployment to a cloud provider (Netlify, Amplify, or GitHub Pages)
+- Deployment to a cloud provider (Netlify, or GitHub Pages)
