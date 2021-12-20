@@ -8,6 +8,18 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 const Car = (props) => {
+  let cart = []
+
+  const saveCart = (item)=>{
+    cart.push(item)
+   
+    console.log('this is before',cart);
+    store.dispatch({
+      type: 'SET_CART',
+      payload: cart
+    })
+
+  }
   const Cars = [
     { id:1, name: 'Car stearins', image: 'https://image.made-in-china.com/202f0j00uWpgQrUdVibI/Hot-Selling-Car-Steering-Wheel-Cover-Car-Accessories-Car-Decoration-Auto-Spare-Part.webp', description: ' Hot Selling Car Steering Wheel Cover Car Accessories Car Decoration Auto Spare Part' },
     { id:2, name: 'Chair xenon', image: 'https://txonstores.com/content/images/thumbs/0003459_seat-protectors_300.jpeg', description: 'Car seat protector for front seats  Non-skid mesh backing keeps car seat protectors in place  Adjustable belts secure protector to most all makes and model'
@@ -52,7 +64,7 @@ const Car = (props) => {
                   <Card.Text>
                     {element.description}
                   </Card.Text>
-                  <Button variant="outline-success">Add to Cart</Button>{' '}
+                  <Button onClick={()=>saveCart(element.name)}variant="outline-success">Add to Cart</Button>{' '}
                 </Card.Body>
               </Card>
               </Col>
