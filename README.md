@@ -9,6 +9,7 @@ Virtual Store using react, redux and materialUI - built in 4 phases. A Web Appli
 ## links and resources
 
 ## <center> [sandbox](https://codesandbox.io/s/quizzical-grass-8ddpd) </center>
+## <center> [netlify](https://infallible-jang-f52fbe.netlify.app/Cart) </center>
 <!-- 
 ## <center> [netlify deployed link]() </center>
  -->
