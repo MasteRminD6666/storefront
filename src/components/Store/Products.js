@@ -6,7 +6,8 @@ const initialState = {
         activeCategory: '',
         categoryList: [],
     },
-    products: [],
+    products: []
+    ,
     AllProducts: []
 }
 
@@ -19,15 +20,17 @@ function appState(state = initialState, action) {
             return {
                 ...state,
                 categories: { ...state.categories, activeCategory: payload },
-
-
             };
         case 'SET_PRODUCTS':
             return {
                 ...state,
                 products: payload,
-
             };
+            case 'SET_CART':
+                return {
+                    ...state,
+                    AllProducts:[...state.AllProducts, ...payload]  ,
+                };
 
         default:
             return state;
