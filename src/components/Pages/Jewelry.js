@@ -9,6 +9,18 @@ import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 const Jewelry = (props) => {
+  let cart = []
+
+  const saveCart = (item)=>{
+    cart.push(item)
+   
+    console.log('this is before',cart);
+    store.dispatch({
+      type: 'SET_CART',
+      payload: cart
+    })
+
+  }
   const jewelry = [
     { id: 1, name: 'Allison Kaufman', image: 'https://imgs-s1.jewelryimages.net/vendor-jewelry-images/galleries/allisonkaufman/1x1/F213-70447-W.jpg?v=7', description: 'Allison-Kaufman Company, in business since 1920,diamond jewelry.', price: '20$' },
     { id: 2, name: 'Diamond Bracelets', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2OI3qFITYzcQGzXQUxMC8q1VfDfian1m1TA&usqp=CAU ', description: '', price: '20$' },
@@ -53,7 +65,7 @@ const Jewelry = (props) => {
                         <ListGroup.Item>{element.price}</ListGroup.Item>
 
                       </ListGroup>
-                      <Button variant="outline-success">Add to Cart</Button>{' '}
+                      <Button onClick={()=>saveCart(element.name)} variant="outline-success">Add to Cart</Button>{' '}
                     </Card.Body>
                   </Card>
                 </Col>

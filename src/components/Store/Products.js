@@ -26,11 +26,16 @@ function appState(state = initialState, action) {
                 ...state,
                 products: payload,
             };
-            case 'SET_CART':
-                return {
-                    ...state,
-                    AllProducts:[...state.AllProducts, ...payload]  ,
-                };
+        case 'SET_CART':
+            return {
+                ...state,
+                AllProducts: [...state.AllProducts, ...payload],
+            };
+
+        case 'DELETE':
+            return {
+             
+            };
 
         default:
             return state;

@@ -8,30 +8,46 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 const Carts = (props) => {
-    setTimeout(() => {
-        console.log('here',props.AllProducts);
-    }, 5000);
+    const deleteCart=(item)=>{
+    
+    
+       if (props.AllProducts.includes(item)) {
+        
+        store.dispatch({
+            type: 'Delete',
+          });
+       }
+    }
+
     return (
         <>
-         {props.AllProducts.map(element => {
-          return (
-            <>
-            <Col>
-              <Card style={{ width: '18rem' }} bg='Dark'>
+            <div className="home">
 
-                <Card.Img variant="top" src="" style={{ height: '160px', cover: 'fill' }} />
-                <Card.Body>
-                  <Card.Title>{element}</Card.Title>
-                  <Card.Text>
-                   
-                  </Card.Text>
-                  <Button variant="outline-success">Add to Cart</Button>{' '}
-                </Card.Body>
-              </Card>
-              </Col>
-            </>
-          )
-        })}
+                <h1>this is the active category 👉 {props.categories.activeCategory}</h1>
+            </div>
+            <div className="center">
+
+                <Row xs={3} md={4} >
+                    {props.AllProducts.map((element , index) => {
+                        return (
+                            <>
+                                <Col>
+                                    <Card style={{ width: '18rem' }} bg='light'>
+                                        <Card.Body>
+                                            <Card.Title>{element}</Card.Title>
+                                            <Button onClick={()=>deleteCart(index)} variant="outline-danger">Delete</Button>{' '}
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            </>
+                        )
+                    })}
+                </Row>
+
+            </div>
+
+
+
         </>
     );
 

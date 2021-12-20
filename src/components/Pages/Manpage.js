@@ -9,6 +9,18 @@ import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 const Men = (props) => {
+  let cart = []
+
+  const saveCart = (item)=>{
+    cart.push(item)
+   
+    console.log('this is before',cart);
+    store.dispatch({
+      type: 'SET_CART',
+      payload: cart
+    })
+
+  }
   const men = [
     { id:1, name: 'Autumn Winter Vintage Striped Sweater Men Clothes Pullover Men Sweater Jumper Men', image: 'https://m.media-amazon.com/images/I/81xoC7S4+3L._AC_UY1000_.jpg', description: ' striped Style:Casual Material:Cotton Material:', price:'40$' },
     { id:2, name: 'Chair xenon', image: 'https://4.imimg.com/data4/LM/WA/GLADMIN-22582208/1-500x500.jpg', description: '' , price:'23$'
@@ -54,7 +66,7 @@ const Men = (props) => {
 
               </ListGroup>
 
-              <Button variant="outline-success">Add to Cart</Button>{' '}
+              <Button onClick={()=>saveCart(element.name)} variant="outline-success">Add to Cart</Button>{' '}
             </Card.Body>
           </Card>
         </Col>
