@@ -11,6 +11,7 @@ import Contact from "./components/Pages/ContactUs";
 import Support from "./components/Pages/Support";
 import Cart from "./components/Pages/Cart";
 function App() {
+
   return (
     <Router>
       <Sidebar />
