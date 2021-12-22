@@ -38,13 +38,28 @@ export default function appState(state = initialState, action) {
             return {
                 ...state,
                 AllProducts: state.AllProducts.filter((p) => p.id !== payload)
-            } 
+            }
 
         case 'GET':
-            return{
-             ...state,
-             results:  payload
+            return {
+                ...state,
+                results: payload
             };
+        case 'GET_MEN_CLOTHES':
+            return {
+                ...state,
+                results: payload
+            }
+        case 'GET_WOMEN_CLOTHES':
+            return {
+                ...state,
+                results: payload
+            }
+        case 'GET_Electronics':
+            return {
+                ...state,
+                results: payload
+            }
         default:
             return state;
     }

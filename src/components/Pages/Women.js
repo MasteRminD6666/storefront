@@ -10,21 +10,19 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { get } from '../Store/actions';
-const Bags = () => {
+import { womenMenClothes } from '../Store/actions';
+const Men = () => {
   let cart = []
-
-
   const dispatch = useDispatch();
   const results = useSelector(state => state.Products.results.results);
   const allproducts = useSelector(state => state.Products.AllProducts);
   const [render, setRender] = useState(false)
-  function getBags() {
-    dispatch(get());
+  function getWomen() {
+    dispatch(womenMenClothes());
   }
   ;
   useEffect(() => {
-    getBags()
+    getWomen()
 
     setTimeout(() => {
       setRender(true)
@@ -63,11 +61,11 @@ const Bags = () => {
   // useEffect(() => {
   //   store.dispatch({
   //     type: 'SELECT_CATEGORY',
-  //     payload: 'Bags'
+  //     payload: 'Men'
   //   });
   //   store.dispatch({
   //     type: 'SET_PRODUCTS',
-  //     payload: Bags
+  //     payload: Men
   //   })
 
   // }, [])
@@ -82,9 +80,9 @@ const Bags = () => {
                 return (
                   <>
                     <Col>
-                      <Card style={{ width: '18rem', }} bg='light'>
+                      <Card style={{ width: '19rem', }} bg='light'>
 
-                        <Card.Img variant="top" src={element.image} style={{ height: '160px', cover: 'fill' }} />
+                        <Card.Img variant="top" src={element.image} style={{ height: '200px', cover: 'fill' }} />
                         <Card.Body>
                           <Card.Title>{element.title}</Card.Title>
                           <Card.Text>
@@ -110,4 +108,4 @@ const Bags = () => {
 
 
 };
-export default Bags
+export default Men
