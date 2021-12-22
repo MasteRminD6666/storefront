@@ -10,21 +10,19 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getMenClothes } from '../Store/actions';
+import { womenMenClothes } from '../Store/actions';
 const Men = () => {
   let cart = []
-
-
   const dispatch = useDispatch();
   const results = useSelector(state => state.Products.results.results);
   const allproducts = useSelector(state => state.Products.AllProducts);
   const [render, setRender] = useState(false)
-  function getMen() {
-    dispatch(getMenClothes());
+  function getWomen() {
+    dispatch(womenMenClothes());
   }
   ;
   useEffect(() => {
-    getMen()
+    getWomen()
 
     setTimeout(() => {
       setRender(true)

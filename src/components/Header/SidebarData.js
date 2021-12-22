@@ -24,13 +24,13 @@ export const SidebarData = [
         icon: <AiIcons.AiOutlineSkin />,
       },
       {
-        title: "Car's Accessories ",
-        path: "/Categories/Car's",
+        title: "Electronics ",
+        path: "/Categories/Electronics",
         icon: <AiIcons.AiFillCar />,
       },
       {
-        title: "bags & shoes",
-        path: "/Categories/bags",
+        title: "Women's fashion",
+        path: "/Categories/Women",
         icon: <AiIcons.AiOutlineShopping />,
       },
       {
