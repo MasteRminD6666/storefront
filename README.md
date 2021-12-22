@@ -32,7 +32,7 @@ An online shopping portal for a fictional store
 This application will power an online storefront that will allow users to browse product offerings by category, place items in their shopping cart, and check-out when they are ready to make their purchase.
 
 ### Phase 3 Requirements - Lab Class 38
-
+### ![](https://media.giphy.com/media/vUFkrx2OgUsduHuOsO/giphy.gif)
 In phase 3, we will be connecting our Virtual Store to a live API so that our data is persistent and able to be separately managed.
 
 The user stories from Phases 1 and 2 remain unchanged. For this phase, we are now adding the following new user stories to meet the new requirements.
